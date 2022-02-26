@@ -1,4 +1,4 @@
-package works.wachirawitch.week1.entity;
+package works.wachirawitch.week1.product.entity;
 
 import java.util.ArrayList;
 
