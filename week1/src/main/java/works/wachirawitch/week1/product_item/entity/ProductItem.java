@@ -5,10 +5,13 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import works.wachirawitch.week1.basket.entity.Basket;
 import works.wachirawitch.week1.product.entity.Product;
 
 @Entity
@@ -19,9 +22,11 @@ import works.wachirawitch.week1.product.entity.Product;
 public class ProductItem {
     @Id
     private int id;
+
     @ManyToOne
     @JoinColumn(name="product_id")
     private Product product;
+    
     private int qty;
     private double amount;
 }

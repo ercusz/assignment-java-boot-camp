@@ -6,10 +6,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 import works.wachirawitch.week1.address.entity.Address;
 import works.wachirawitch.week1.basket.entity.Basket;
 
@@ -17,7 +19,6 @@ import works.wachirawitch.week1.basket.entity.Basket;
 @Getter
 @Setter
 @NoArgsConstructor
-@ToString
 public class User {
     @Id
     private int id;
